@@ -1,7 +1,7 @@
 %define name gnonlin
 %define		gst_req 0.10
 Name: 		%name
-Version: 	0.10.7
+Version: 	0.10.8
 Release: %mkrel 1
 Summary: 	GStreamer extension library for non-linear editing
 
@@ -34,7 +34,7 @@ files to allow you to build applications with gnonlin.
 %setup -q
 aclocal-1.8 -I common/m4
 autoconf
-automake-1.8
+automake-1.8 -a -c
 
 %build
 %configure2_5x
