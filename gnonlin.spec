@@ -9,7 +9,6 @@ Group: 		System/Libraries
 License: 	LGPL
 URL:		http://gnonlin.sf.net/
 Source:		http://gstreamer.freedesktop.org/src/gnonlin/%{name}-%{version}.tar.bz2
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires: 	libgstreamer-plugins-base-devel >= %{gst_req}
 BuildRequires: automake1.8 gettext-devel
 Provides: gnonlin-devel
