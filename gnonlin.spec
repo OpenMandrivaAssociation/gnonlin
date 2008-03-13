@@ -2,7 +2,7 @@
 %define		gst_req 0.10
 Name: 		%name
 Version: 	0.10.9
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: 	GStreamer extension library for non-linear editing
 
 Group: 		System/Libraries
@@ -37,7 +37,11 @@ autoconf
 automake-1.8 -a -c
 
 %build
-%configure2_5x
+%configure2_5x \
+  --with-package-name='Mandriva %name package' \
+  --with-package-origin='http://www.mandriva.com/' \
+
+
 %make
 
 %install
