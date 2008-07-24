@@ -2,7 +2,7 @@
 %define		gst_req 0.10
 Name: 		%name
 Version: 	0.10.9
-Release: %mkrel 3
+Release: %mkrel 5
 Summary: 	GStreamer extension library for non-linear editing
 
 Group: 		System/Libraries
