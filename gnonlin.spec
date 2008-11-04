@@ -11,7 +11,8 @@ URL:		http://gnonlin.sf.net/
 Source:		http://gstreamer.freedesktop.org/src/gnonlin/%{name}-%{version}.tar.bz2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires: 	libgstreamer-plugins-base-devel >= %{gst_req}
-BuildRequires: automake1.8 gettext-devel
+BuildRequires:	automake gettext-devel
+BuildRequires:	libtool
 Obsoletes: gnonlin-devel
 
 %description
@@ -24,13 +25,15 @@ applications. It introduces the concept of a timeline.
 ./autogen.sh
 
 %build
-%configure2_5x
-%make
+%configure2_5x \
+	--with-package-name='Mandriva %name package' \
+	--with-package-origin='http://www.mandriva.com/'
+%make LIBTOOL=%_bindir/libtool
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%makeinstall_std
+%makeinstall_std LIBTOOL=%_bindir/libtool
 rm -f $RPM_BUILD_ROOT%{_libdir}/gstreamer-*/*.*a
 
 %clean
