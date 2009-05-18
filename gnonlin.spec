@@ -13,6 +13,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires: 	libgstreamer-plugins-base-devel >= %{gst_req}
 BuildRequires:	automake gettext-devel
 BuildRequires:	libtool
+BuildRequires:	gtk-doc
 Obsoletes: gnonlin-devel
 
 %description
