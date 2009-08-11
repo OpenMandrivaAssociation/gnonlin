@@ -1,7 +1,7 @@
 %define name gnonlin
 %define		gst_req 0.10
 Name: 		%name
-Version: 	0.10.11.3
+Version: 	0.10.12
 Release: %mkrel 1
 Summary: 	GStreamer extension library for non-linear editing
 
