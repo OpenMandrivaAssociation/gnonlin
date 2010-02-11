@@ -1,7 +1,7 @@
 %define name gnonlin
 %define		gst_req 0.10
 Name: 		%name
-Version: 	0.10.13
+Version: 	0.10.14
 Release: %mkrel 1
 Summary: 	GStreamer extension library for non-linear editing
 
@@ -33,11 +33,11 @@ applications. It introduces the concept of a timeline.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%check
-make check
-
 %makeinstall_std LIBTOOL=%_bindir/libtool
 rm -f $RPM_BUILD_ROOT%{_libdir}/gstreamer-*/*.*a
+
+%check
+make check
 
 %clean
 rm -rf $RPM_BUILD_ROOT
