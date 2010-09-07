@@ -14,6 +14,8 @@ BuildRequires: 	libgstreamer-plugins-base-devel >= %{gst_req}
 BuildRequires:	automake gettext-devel
 BuildRequires:	libtool
 BuildRequires:	gtk-doc
+#gw for the checks:
+BuildRequires:	gstreamer0.10-plugins-good
 Obsoletes: gnonlin-devel
 
 %description
@@ -28,12 +30,12 @@ applications. It introduces the concept of a timeline.
 %configure2_5x \
 	--with-package-name='Mandriva %name package' \
 	--with-package-origin='http://www.mandriva.com/'
-%make LIBTOOL=%_bindir/libtool
+%make
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%makeinstall_std LIBTOOL=%_bindir/libtool
+%makeinstall_std
 rm -f $RPM_BUILD_ROOT%{_libdir}/gstreamer-*/*.*a
 
 %check
