@@ -33,16 +33,16 @@ applications. It introduces the concept of a timeline.
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %makeinstall_std
-rm -f $RPM_BUILD_ROOT%{_libdir}/gstreamer-*/*.*a
+rm -f %{buildroot}%{_libdir}/gstreamer-*/*.*a
 
 %check
 make check
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-, root, root, -)
