@@ -15,7 +15,7 @@ BuildRequires:	automake gettext-devel
 BuildRequires:	libtool
 BuildRequires:	gtk-doc
 #gw for the checks:
-BuildRequires:	gstreamer0.10-plugins-good
+BuildRequires:	gstreamer0.10-plugins-base gstreamer0.10-plugins-good gstreamer0.10-tools
 Obsoletes: gnonlin-devel
 
 %description
