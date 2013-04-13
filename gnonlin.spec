@@ -13,6 +13,7 @@ BuildRequires:	gtk-doc
 BuildRequires:	gettext-devel
 BuildRequires: 	gstreamer%{gstapi}-plugins-good
 BuildRequires: 	pkgconfig(gstreamer-plugins-base-%{gstapi})
+BuildRequires:	gstreamer0.10-tools
 
 %description
 Gnonlin is a library built on top of GStreamer (http://gstreamer.net)
