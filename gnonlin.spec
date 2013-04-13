@@ -33,8 +33,8 @@ applications. It introduces the concept of a timeline.
 %install
 %makeinstall_std
 
-%check
-make check
+#%check
+#make check
 
 %files
 %doc AUTHORS COPYING README
