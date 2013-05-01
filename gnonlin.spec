@@ -9,11 +9,11 @@ License: 	LGPLv2+
 Url:		http://gnonlin.sf.net/
 Source0:	http://gstreamer.freedesktop.org/src/gnonlin/%{name}-%{version}.tar.bz2
 
+BuildRequires: 	gstreamer%{gstapi}-plugins-good
+BuildRequires:	gstreamer%{gstapi}-tools
 BuildRequires:	gtk-doc
 BuildRequires:	gettext-devel
-BuildRequires: 	gstreamer%{gstapi}-plugins-good
 BuildRequires: 	pkgconfig(gstreamer-plugins-base-%{gstapi})
-BuildRequires:	gstreamer0.10-tools
 
 %description
 Gnonlin is a library built on top of GStreamer (http://gstreamer.net)
@@ -26,7 +26,7 @@ applications. It introduces the concept of a timeline.
 %build
 %configure2_5x \
 	--disable-static \
-	--with-package-name='Mandriva %name package' \
+	--with-package-name='Mandriva %{name} package' \
 	--with-package-origin='http://www.mandriva.com/'
 %make
 
@@ -38,5 +38,5 @@ applications. It introduces the concept of a timeline.
 
 %files
 %doc AUTHORS COPYING README
-%{_libdir}/gstreamer-%{gstapi}/libgnl*.so
+%{_libdir}/gstreamer-%{gstapi}/libgnl.so
 
