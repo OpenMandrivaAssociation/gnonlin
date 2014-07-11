@@ -3,7 +3,7 @@
 Summary: 	GStreamer extension library for non-linear editing
 Name: 		gnonlin
 Version: 	0.10.17
-Release:	9
+Release:	10
 Group: 		System/Libraries
 License: 	LGPLv2+
 Url:		http://gnonlin.sf.net/
