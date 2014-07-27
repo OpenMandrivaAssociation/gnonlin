@@ -1,19 +1,18 @@
-%define gstapi	0.10
+%define gstapi	1.0
 
 Summary: 	GStreamer extension library for non-linear editing
 Name: 		gnonlin
-Version: 	0.10.17
-Release:	5
+Version: 	1.2.0
+Release:	1
 Group: 		System/Libraries
 License: 	LGPLv2+
 Url:		http://gnonlin.sf.net/
-Source0:	http://gstreamer.freedesktop.org/src/gnonlin/%{name}-%{version}.tar.bz2
+Source0:	http://gstreamer.freedesktop.org/src/gnonlin/gnonlin-%{version}.tar.xz
 
-BuildRequires: 	gstreamer%{gstapi}-plugins-good
-BuildRequires:	gstreamer%{gstapi}-tools
-BuildRequires:	gtk-doc
-BuildRequires:	gettext-devel
-BuildRequires: 	pkgconfig(gstreamer-plugins-base-%{gstapi})
+BuildRequires: pkgconfig(gstreamer-app-%{gstapi})
+BuildRequires: pkgconfig(gstreamer-%{gstapi})	
+
+Requires: 	gstreamer%{gstapi}-plugins-base 
 
 %description
 Gnonlin is a library built on top of GStreamer (http://gstreamer.net)
@@ -25,18 +24,15 @@ applications. It introduces the concept of a timeline.
 
 %build
 %configure2_5x \
-	--disable-static \
-	--with-package-name='Mandriva %{name} package' \
-	--with-package-origin='http://www.mandriva.com/'
+	--disable-static 
+
 %make
 
 %install
 %makeinstall_std
 
-#%check
-#make check
 
 %files
-%doc AUTHORS COPYING README
+%doc AUTHORS COPYING.LIB README
 %{_libdir}/gstreamer-%{gstapi}/libgnl.so
 
