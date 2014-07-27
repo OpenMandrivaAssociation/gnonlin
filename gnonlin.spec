@@ -7,7 +7,7 @@ Release:	1
 Group: 		System/Libraries
 License: 	LGPLv2+
 Url:		http://gnonlin.sf.net/
-Source0:	http://gstreamer.freedesktop.org/src/gnonlin/%{name}-%{version}.tar.bz2
+Source0:	http://gstreamer.freedesktop.org/src/gnonlin/gnonlin-%{version}.tar.xz
 
 BuildRequires: pkgconfig(gstreamer-app-%{gstapi})
 BuildRequires: pkgconfig(gstreamer-%{gstapi})	
