@@ -1,2 +1,4 @@
+removed_sources:
+  gnonlin-0.10.17.tar.bz2: 5d3fb27b2590b5a5b8c35e459db6d4cfe489ee15
 sources:
-  "gnonlin-0.10.17.tar.bz2": 5d3fb27b2590b5a5b8c35e459db6d4cfe489ee15
+  gnonlin-1.3.90.tar.xz: 30edac0ad61f2d5121cd08660a91e7a46cbb2316
