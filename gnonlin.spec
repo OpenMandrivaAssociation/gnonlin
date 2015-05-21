@@ -2,12 +2,12 @@
 
 Summary: 	GStreamer extension library for non-linear editing
 Name: 		gnonlin
-Version: 	1.2.0
-Release:	1
+Version: 	1.4.0
+Release:	0.1
 Group: 		System/Libraries
 License: 	LGPLv2+
 Url:		http://gnonlin.sf.net/
-Source0:	http://gstreamer.freedesktop.org/src/gnonlin/gnonlin-%{version}.tar.xz
+Source0:	http://gstreamer.freedesktop.org/src/gnonlin/%{name}-%{version}.tar.xz
 
 BuildRequires: pkgconfig(gstreamer-app-%{gstapi})
 BuildRequires: pkgconfig(gstreamer-%{gstapi})	
@@ -24,8 +24,9 @@ applications. It introduces the concept of a timeline.
 
 %build
 %configure2_5x \
-	--disable-static 
-
+	--disable-static  \
+	--with-package-name='OpenMandriva Lx %{name} package' \
+	--with-package-origin='http://www.openmandriva.org/'
 %make
 
 %install
