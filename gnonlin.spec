@@ -6,7 +6,7 @@ Version: 	1.4.0
 Release:	4
 Group: 		System/Libraries
 License: 	LGPLv2+
-Url:		http://gnonlin.sf.net/
+Url:		https://gnonlin.sf.net/
 Source0:	http://gstreamer.freedesktop.org/src/gnonlin/%{name}-%{version}.tar.xz
 
 BuildRequires: 	gstreamer%{gstapi}-plugins-good
